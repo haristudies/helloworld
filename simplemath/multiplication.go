@@ -1,18 +1,13 @@
 package main
 
 type nums struct {
-	firstNum  int
-	secondNum int
+	firstNum, secondNum int
 }
 
-func newNums() *nums {
-	return &nums{}
+func (n nums) addition() int {
+	return n.firstNum + n.secondNum
 }
 
-func (n nums) addition(a int, b int) int {
-	return a + b
-}
-
-func (n nums) mul(a int, b int) int {
-	return a * b
+func (n nums) mul() int {
+	return n.firstNum * n.secondNum
 }
